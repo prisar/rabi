@@ -1,4 +1,4 @@
-package com.prisar.rabi
+package com.kulik.rabi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

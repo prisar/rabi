@@ -1,4 +1,4 @@
-package com.prisar.rabi
+package com.kulik.rabi
 
 import org.junit.Test
 

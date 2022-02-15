@@ -7,7 +7,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.prisar.rabi"
+        applicationId "com.kulik.rabi"
         minSdk 21
         targetSdk 32
         versionCode 1
