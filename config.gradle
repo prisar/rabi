@@ -20,10 +20,10 @@ ext {
     ]
 
     sign = [
-            file         : '/Users/apple/Downloads',
-            storePassword: '',
-            keyAlias     : '',
-            keyPassword  : ''
+            file         : '..',
+            storePassword: '..',
+            keyAlias     : '..',
+            keyPassword  : '..'
     ]
 
 }

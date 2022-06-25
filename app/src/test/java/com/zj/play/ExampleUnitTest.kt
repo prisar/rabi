@@ -1,4 +1,4 @@
-package com.kulik.rabi
+package com.zj.play
 
 import org.junit.Test
 

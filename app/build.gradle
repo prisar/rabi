@@ -17,7 +17,7 @@ android {
     compileSdkVersion cfgs.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.zj.play"
+        applicationId "com.kuilk.rabi"
         minSdkVersion cfgs.minSdkVersion
         targetSdkVersion cfgs.targetSdkVersion
         versionCode cfgs.versionCode

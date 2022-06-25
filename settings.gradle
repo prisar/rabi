@@ -2,6 +2,6 @@ include ':floating'
 include ':permisson'
 include ':model'
 include ':network'
-rootProject.name = "Rabi"
+rootProject.name='PlayAndroid'
 include ':app'
 include ':core'
