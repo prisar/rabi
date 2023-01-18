@@ -1,6 +1,5 @@
 package com.kulik.rabi
 
-import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -15,6 +14,11 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
@@ -82,12 +86,35 @@ fun Greeting() {
                     .padding(10.dp)
                     .background(color = Black)
             ) {
-                Text(text = it.title)
-                Text(text = it.author.name)
-                AsyncImage(
-                    model = it.imageUrl,
-                    contentDescription = null
-                )
+                Row(modifier = Modifier.height(56.dp).fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Column(
+                        modifier = Modifier.padding(15.dp)
+                    ) {
+                        Text(
+                            buildAnnotatedString {
+                                append("book: ")
+                                withStyle(style = SpanStyle(fontWeight = FontWeight.W900, color = Color(0xFF4552B8))
+                                ) {
+                                    append(it.title)
+                                }
+                            }
+                        )
+                        Text(
+                            buildAnnotatedString {
+                                append("author")
+                                withStyle(style = SpanStyle(fontWeight = FontWeight.W900)) {
+                                    append(": ")
+                                }
+                                append(it.author.name)
+                            }
+                        )
+                    }
+
+                    AsyncImage(model = it.imageUrl, contentDescription = null)
+                }
             }
         }
     }
