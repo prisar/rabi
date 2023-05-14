@@ -1,9 +1,11 @@
 package com.kulik.rabi
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -15,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -25,6 +28,7 @@ import coil.compose.AsyncImage
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
 import com.kulik.rabi.ui.theme.Black
+import com.kulik.rabi.ui.theme.PoemActivity
 import com.kulik.rabi.ui.theme.RabiTheme
 import com.kulik.rabi.ui.theme.White
 
@@ -65,7 +69,7 @@ data class JsonResponse(
 @Composable
 fun Greeting() {
     val gson = Gson()
-
+    val context = LocalContext.current
     val response =  gson.fromJson(booksString, JsonResponse::class.java)
 
     LazyColumn(
@@ -74,7 +78,9 @@ fun Greeting() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         item() {
-            Text("Books")
+            Text("Books", modifier = Modifier.clickable() {
+                context.startActivity(Intent(context, PoemActivity::class.java))
+            })
         }
 
         items(response.items) {
@@ -117,14 +123,6 @@ fun Greeting() {
                 }
             }
         }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    RabiTheme {
-        Greeting()
     }
 }
 
