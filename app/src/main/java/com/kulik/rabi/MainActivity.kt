@@ -77,7 +77,7 @@ fun Greeting() {
     ) {
         item() {
             Text("Books", modifier = Modifier.clickable() {
-                context.startActivity(Intent(context, PoemActivity::class.java))
+                context.startActivity(Intent(context, PoetsActivity::class.java))
             })
         }
 
