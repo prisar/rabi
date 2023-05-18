@@ -14,12 +14,12 @@
         android:theme="@style/Theme.Rabi"
         tools:targetApi="31">
         <activity
-            android:name=".ui.theme.BooksActivity"
+            android:name=".BooksActivity"
             android:exported="false"
             android:label="@string/title_activity_books"
             android:theme="@style/Theme.Rabi" />
         <activity
-            android:name=".ui.theme.PoemActivity"
+            android:name=".PoemActivity"
             android:exported="false"
             android:label="@string/title_activity_poem"
             android:theme="@style/Theme.Rabi" />

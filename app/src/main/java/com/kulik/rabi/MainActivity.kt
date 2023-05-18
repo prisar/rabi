@@ -22,13 +22,11 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
 import com.kulik.rabi.ui.theme.Black
-import com.kulik.rabi.ui.theme.PoemActivity
 import com.kulik.rabi.ui.theme.RabiTheme
 import com.kulik.rabi.ui.theme.White
 

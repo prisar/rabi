@@ -1,4 +1,4 @@
-package com.kulik.rabi.ui.theme
+package com.kulik.rabi
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,7 +9,6 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.kulik.rabi.ui.theme.ui.theme.RabiTheme
 
 class BooksActivity : ComponentActivity() {
@@ -35,12 +34,4 @@ fun Greeting2(name: String, modifier: Modifier = Modifier) {
         text = "Hello $name!",
         modifier = modifier
     )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    RabiTheme {
-        Greeting2("Android")
-    }
 }
